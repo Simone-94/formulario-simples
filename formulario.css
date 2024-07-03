@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adicionado para garantir que padding e border não aumentem a largura dos elementos */
+}
+/* O * seleciona todos elementos do HTML
+A # "chama" o id desejado do HTML*/
+#titulo {
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 7%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+#subtitulo{
+    font-size: 19px;
+    padding: 10px;
+    margin: 1%;
+    text-align: center;
+}
+
+#check {
+    display: inline-block;
+}
+
+fieldset {
+    border: 0;
+}
+
+body{
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    max-width: 800px; /* Define uma largura máxima para o conteúdo */
+    padding: 20px; /* Adiciona espaço interno ao redor do conteúdo */
+}
+
+form {
+    width: 100%;
+    max-width: 500px; /* Define uma largura máxima para o formulário */
+    margin: 20px auto; /* Centraliza o formulário horizontalmente e adiciona espaço externo */
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+/*Colocando borda em todas caixas de texto*/
+input, select, textarea, button{
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    border-radius: 5px;
+}
+
+/*Chamar uma classe usa-se o .*/
+
+.grupo:before, .grupo:after {
+    display: table;
+}
+
+.grupo:after {
+    clear: both;
+}
+
+.campo { /* Adiciona um espaçamento entre os elementos do formulário */
+    margin-bottom: 20px;
+}
+
+.campo label{
+    margin-bottom: 0.2em;
+    color:#59429d;
+    display: block;
+}
+
+fieldset.grupo .campo{
+    float: left;
+    margin-right: 1em;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+    padding: 0.2em;
+    border: 1px solid #59429d;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+.campo select option{
+    padding-right: 1em;
+}
+
+/*Deixando o elemento em evidência*/
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #e0e0f8;
+}
+
+.botao{
+    font-size: 1.2em;
+    background: #59429d;
+    border: 0;
+    margin-bottom: 1em;
+    color: cornsilk;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/*Efeito de quando passa o mouse por cima*/
+.botao:hover {
+    background: #ccbbff;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+.botao, select{
+    cursor: pointer;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 500px) {
+    #titulo, #subtitulo {
+        margin-left: 0;
+        text-align: center; /* Centraliza o texto */
+    }
+
+    form {
+        padding: 20px;
+    }
+}
